@@ -4,8 +4,7 @@ createApp({
   data() {
     return {
         todos: [
-            { text: "Fare la spesa", done: false },
-            { text: "Pulire la casa", done: true }
+            // ! Qui vanno tutti i Todos che creiamo
         ],
         newTodoText: ''
     };
@@ -19,8 +18,18 @@ createApp({
 
 methods: {
     
-    // todo - Qui vanno inserite tutte le funzioni
-
+    addTodo() {
+        if (this.newTodoText.trim() !== '') {
+            this.todos.push({
+                text: this.newTodoText,
+                done: false
+            });
+            this.newTodoText = '';
+        }
+    },
+    removeTodo(index) {
+        this.todos.splice(index, 1);
+    }
 }
 
 }).mount('#app');
