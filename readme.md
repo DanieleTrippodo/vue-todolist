@@ -30,6 +30,8 @@ Buon lavoro e buon divertimento!
 
 
 
+# Svolgimento ---------------------------------------
 
+1) Creare un Array ad Oggetti, con elementi 'Name' e 'Done'
 
-# Svolgimento -------------------------------------------------------
+2) 
