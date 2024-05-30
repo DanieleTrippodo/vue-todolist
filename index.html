@@ -11,22 +11,28 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
+
+
+
+
 <body>
     <div id="app">
 
         <!-- Titolo dell'esercizio -->
         <h1>TodoList</h1>
+        <input type="text" v-model="newTodoText" @keyup.enter="addTodo">
+        <button @click="addTodo">Aggiungi</button>
+
+        <!-- Lista di attività -->
+        <ul>
+            <li v-for="(todo, index) in todos" :key="index">
+                <span :class="{ 'done': todo.done }">{{ todo.text }}</span>
+                <button @click="removeTodo(index)">x</button>
+            </li>
+        </ul>
 
 
-    <!-- Lista di attività -->
-    <ul>
-      <li v-for="(item, index) in items" :key="index">
-        {{ item.Name }} - {{ item.Done }}
-      </li>
-    </ul>
-
-
-  </div>
+    </div>
 
     <!-- Collegamento Vue 3 -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>

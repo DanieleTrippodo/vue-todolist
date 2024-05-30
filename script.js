@@ -3,11 +3,12 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        TodoList: [
-            {Name:'', done: false }
-
+        todos: [
+            { text: "Fare la spesa", done: false },
+            { text: "Pulire la casa", done: true }
         ],
-    }
+        newTodoText: ''
+    };
 },
 
 
